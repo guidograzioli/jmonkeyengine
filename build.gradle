@@ -1,5 +1,16 @@
 import org.gradle.api.artifacts.*
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7'
+    }
+}
+
+
 apply plugin: 'base' // To add "clean" task to the root project.
 //apply plugin: 'java-library-distribution'
 

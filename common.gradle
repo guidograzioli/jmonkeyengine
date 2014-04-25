@@ -82,3 +82,14 @@ task createFolders(description: 'Creates the source folders if they do not exist
 //        }
 //    }
 }
+
+apply plugin: 'nexus'
+
+nexus {
+    attachSources = false
+    attachTests = false
+    attachJavadoc = false
+    sign = false
+    repositoryUrl = 'http://undebugged.com/nexus/content/repositories/thirdparty/'
+    snapshotRepositoryUrl = 'http://undebugged.com/nexus/content/repositories/thirdparty-snapshots/'
+}
